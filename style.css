@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(182, 216, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    border: 1px solid grey;
+    border-radius: 50px;
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #005ff9;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #005CF1;
+}
+
+input[type=text], input[type=password] {
+    height: 30px;
+}
+
+.sex-block__label {
+    color: black;
+    margin-right: 20px;
+}
+
+p, label {
+    color: grey;
+}
+
+h1 {
+    align-self: center;
+}
+
+.about-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-block, .surname-block, .birthday-block, .login-block, .password-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-block, .surname-block {
+    width: 190px;
+}
+
+.about-block, .login-block, .password-block {
+    width: 400px;
+}
+
+.name-block_error, .surname-block_error, .sex-block_error, .login-block__error, .password-block_error {
+    color: red;
+    height: 40px;
+}

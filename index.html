@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Задание 2</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Создание учётной записи</h1>
+
+        <div class="about-block">
+            <div class="name-block">
+                <label for="">Имя</label>
+                <input class="name-block__input" type="text">
+                <div class="name-block_error"></div>
+            </div>
+            <div class="surname-block">
+                <label for="">Фамилия</label>
+                <input class="surname-block__input" type="text">
+                <div class="surname-block_error"></div>
+            </div>
+        </div>
+
+        <!-- <div class="birthday-block">
+            <label for="">Дата рождения</label>
+            <div>
+                <select name="" id="1"></select>
+                <select name="" id="2">
+                    <option value="">Январь</option>
+                    <option value="">Февраль</option>
+                    <option value="">Март</option>
+                    <option value="">Апрель</option>
+                    <option value="">Май</option>
+                    <option value="">Июнь</option>
+                    <option value="">Июль</option>
+                    <option value="">Август</option>
+                    <option value="">Сентябрь</option>
+                    <option value="">Октябрь</option>
+                    <option value="">Ноябрь</option>
+                    <option value="">Декабрь</option>
+                </select>
+                <select name="" id="3"></select>
+            </div>
+        </div> -->
+
+        <div class="sex-block">
+            <label for="">Пол</label>
+            <div>
+                <input class="sex-block__input" type="radio" name="sex" id="female">
+                <label class="sex-block__label" for="female">Женский</label>
+                <input class="sex-block__input" type="radio" name="sex" id="male">
+                <label class="sex-block__label" for="male">Мужской</label>
+            </div>
+            <div class="sex-block_error"></div>
+        </div>
+
+        <div class="login-block">
+            <label for="">Логин</label>
+            <input class="login-block__input" type="text">
+            <div class="login-block__error"></div>
+        </div>
+
+        <div class="password-block">
+            <label for="">Пароль</label>
+            <input class="password-block__input" type="password" name="" id="6">
+            <div class="password-block_error"></div>
+        </div>
+
+        <button type="button">Создать</button>
+
+        <p>Нажимая "Создать", вы принимаете условия Пользовательского соглашения</p>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
