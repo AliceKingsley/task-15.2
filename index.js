@@ -1,4 +1,5 @@
 const button = document.querySelector('button');
+const globalError = document.querySelector('.global-error');
 let count = 0;
 let userName;
 let dataForm = {};
@@ -101,20 +102,23 @@ function checkPassword() {
 }
 
 async function submitForm() {
-    if (count === 0) {
-        alert(`Добро пожаловать, ${userName}!`);
-        console.log(dataForm);
+    try {
+        if (count === 0) {
+            let response = await fetch('https://httpbin.org/post', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                body: JSON.stringify(dataForm)
+            });
+            
+            let result = await response.json();
+            console.log(result);
 
-        let response = await fetch('https://httpbin.org/post', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(dataForm)
-        });
-        
-        let result = await response.json();
-        console.log(result);
-
-    } else count = 0;
+            alert(`Добро пожаловать, ${userName}!`);
+    
+        } else count = 0;
+    } catch (error) {
+        globalError.textContent = 'Произошла ошибка сервера. Попробуйте позже или сообщите нам о проблеме.';
+    }
 }

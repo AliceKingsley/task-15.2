@@ -66,7 +66,7 @@ h1 {
     width: 400px;
 }
 
-.name-block_error, .surname-block_error, .sex-block_error, .login-block__error, .password-block_error, .password-block__repeat-error {
+.name-block_error, .surname-block_error, .sex-block_error, .login-block__error, .password-block_error, .password-block__repeat-error, .global-error {
     color: red;
     height: 40px;
 }
